@@ -37,7 +37,7 @@ export const useAuthStore = defineStore('auth', {
         
             await cartStore.fetchCart(this.user.cartId)
           } else {
-            // Если корзины нет, создаем новую
+        
             const newCartId = await cartStore.createCart(this.user.id)
             await databases.updateDocument(DATABASE_ID, USER_ID, this.user.id, { cartId: newCartId })
             this.user.cartId = newCartId
@@ -84,7 +84,7 @@ export const useAuthStore = defineStore('auth', {
           // Загружаем корзину по cartId
           await cartStore.fetchCart(this.user.cartId)
         } else {
-          // Если корзины нет, создаем новую
+          
           const cartId = await cartStore.createCart(this.user.id)
           this.user.cartId = cartId
           await databases.updateDocument(DATABASE_ID, USER_ID, this.user.id, { cartId })
