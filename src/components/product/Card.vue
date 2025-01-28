@@ -36,10 +36,10 @@ const props = defineProps({
   categories_id: { type: Object, required: true },
 });
 
-// Определяем событие для родительского компонента
+
 const emit = defineEmits(['add-to-cart']);
 
-// Функция для передачи события добавления в корзину
+
 function addToCart() {
   emit('add-to-cart', {
     id: props.id,
