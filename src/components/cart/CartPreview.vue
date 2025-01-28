@@ -2,7 +2,7 @@
   <div class="bg-white shadow-2xl rounded-xl px-6 pt-[24px] pb-[29px] w-[349px] z-50">
     <div class="absolute -top-3 right-[20px] w-[23px] h-[23px] rotate-45 bg-white z-0"></div>
     
-    <!-- Товары в корзине -->
+   
     <div class="scrollable max-h-[255px] overflow-y-auto">
       <div 
         v-for="item in cartItems" 
@@ -52,18 +52,18 @@
       </div>
     </div>
 
-    <!-- Сумма заказа -->
+  
     <div class="mb-[20px] font-body flex justify-between">
       <h1 class="font-semibold text-[15px]">Сумма заказов</h1>
       <span class="font-bold text-2xl text-goldenSaffron">{{ totalPrice }} ₽</span>
     </div>
 
-    <!-- Добавить к заказу -->
+
     <div class="cursor-pointer font-body font-semibold text-goldenSaffron text-base mb-[22px]">
       <h1>Добавить к заказу?</h1>
     </div>
 
-    <!-- Рекомендуемые товары -->
+   
     <Swiper :slides-per-view="'auto'" :space-between="16" :free-mode="true" :mousewheel="true">
       <SwiperSlide
         class="flex items-center py-3.5 pl-[17px] pr-[9px] border-[1.5px] rounded-xl"
@@ -87,7 +87,6 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 
-// Pinia store
 import { computed } from 'vue';
 import { useCartStore } from '@/store';
 import type { CartItem } from '@/types/cartItem';
