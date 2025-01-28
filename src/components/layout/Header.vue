@@ -1,8 +1,8 @@
 <template>
   <header class="bg-white shadow-sm py-4 w-3/4 m-auto">
-    <!-- Верхний блок -->
+  
     <div class="flex gap-[235px] mx-auto items-center">
-      <!-- Логотип и информация -->
+  
       <div class="flex items-center gap-12">
         <div class="flex gap-4 items-center">
           <div>
@@ -12,7 +12,7 @@
           </div>
         </div>
 
-        <!-- Информация о доставке -->
+       
         <div class="font-body">
           <p class="text-lg font-semibold text-[#231F20]">
             Доставка пасты <span class="text-goldenSaffron">Москва</span>
@@ -34,7 +34,7 @@
         </div>
       </div>
 
-      <!-- Блок с контактами и кнопкой -->
+     
       <div class="flex items-center gap-7">
         <button
           class="py-2 px-7 bg-gray-100 rounded-[28px] transition hover:bg-gray-200"
@@ -49,7 +49,7 @@
       </div>
     </div>
 
-    <!-- Навигация -->
+ 
     <nav class="mx-auto flex gap-20 mt-5">
       <ul class="flex items-center gap-[22.5px] font-semibold text-base font-body">
         <li class="hover:text-gray-500 transition">
@@ -82,7 +82,7 @@
         </li>
       </ul>
 
-      <!-- Корзина -->
+      
       <div class="relative">
         <div class="flex items-center gap-4">
           <p
@@ -132,20 +132,19 @@ import { useCartStore } from '@/store';
 const authStore = useAuthStore();
 const cartStore = useCartStore();
 
-// Используем состояние корзины и модального окна через inject
+
 const isCartVisible = inject('CartStatus');
 const isModalVisible = inject<Ref<boolean>>('ModalStatus');
 
 
 const cartCount = computed(() => cartStore.cartCount);
 
-// Открыть модальное окно авторизации
 const openModal = () => {
   isModalVisible!.value = true;
 };
 
-// Выход из аккаунта
+
 const logout = () => {
-  authStore.logoutUser(); // Предполагается, что в store есть метод logout
+  authStore.logoutUser(); 
 };
 </script>
