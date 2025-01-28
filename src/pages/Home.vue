@@ -104,7 +104,7 @@ onMounted(async () => {
 const authStore = useAuthStore();
 const cartStore = useCartStore();
 
-// Функция для обработки события добавления товара в корзину
+
 function handleAddToCart(product: Product) {
  if (!authStore.isAuthenticated) {
     alert('Вы должны войти в систему, чтобы добавить товары в корзину');
