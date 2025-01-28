@@ -79,7 +79,7 @@ const isModalVisible = inject('ModalStatus') as Ref<boolean>;
 const closeModal = ()=>{
   isModalVisible.value = false
 }
-// Загружаем данные пользователя из localStorage при монтировании компонента
+
 
 
 const handleSubmit = async () => {
